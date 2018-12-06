@@ -1,6 +1,6 @@
 import React from 'react';
-import { IMAGE_BASE_URL, BACKDROP_SIZE, POSTER_SIZE} from '../../../config';
-import { FontAwesome } from 'react-fontawesome';
+import { IMAGE_BASE_URL, BACKDROP_SIZE, POSTER_SIZE } from '../../../config';
+import FontAwesome from 'react-fontawesome';
 import MovieThumb from './../MovieThumb/MovieThumb';
 import './MovieInfo.css';
 
@@ -13,10 +13,7 @@ const MovieInfo = (props) => {
         >
             <div className='rmdb-movieinfo-content'>
                 <div className='rmdb-movieinfo-thumb'>
-                    <MovieThumb 
-                        image={props.movie.poster_path ? `${IMAGE_BASE_URL}${POSTER_SIZE}${props.movie.poster_path}` : './images/no_image.jpg'}
-                        clickable={false}
-                    />
+                    <MovieThumb image={ props.movie.poster_path ? `${IMAGE_BASE_URL}${POSTER_SIZE}${props.movie.poster_path}` : `./images/no_image.jpg` } clickable={false} />
                 </div>
                 <div className='rmdb-movieinfo-text'>
                     <h1>{props.movie.title}</h1>
